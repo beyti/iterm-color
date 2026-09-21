@@ -13,21 +13,19 @@
 [[ -n "$TMUX" || -n "$SSH_TTY" ]] && return 0
 
 # --- palette ----------------------------------------------------------------
-# Tokyo Night (https://tokyonight.org/palette/). Tab = the accent itself;
-# background = that accent blended 16% into Tokyo Night's bg (#1a1b26), so
-# fg #c0caf5 stays readable while each project keeps a distinct tint.
+# Tokyo Night accents (https://tokyonight.org/palette/). Tab = the accent
+# itself; background = the accent's hue at 75% saturation, 14% lightness —
+# vivid but dark enough for light text. Near-identical hues were dropped.
 typeset -gA ITC_BG ITC_TAB
 ITC_BG=(
-  blue    293147  cyan    2a3849  sky     1d3643  green   2f3831
-  mint    283a40  teal    1a3539  magenta 342f47  purple  2f2b42
-  orange  3f3030  yellow  3a3331  red     3d2a37  crimson 39232c
+  blue    091a3e  cyan    092b3e  sky     09363e  mint    093e36  green   253e09
+  yellow  3e2909  orange  3e1d09  red     3e0913  pink    3e0923  magenta 1c093e
 )
 ITC_TAB=(
-  blue    7aa2f7  cyan    7dcfff  sky     2ac3de  green   9ece6a
-  mint    73daca  teal    1abc9c  magenta bb9af7  purple  9d7cd8
-  orange  ff9e64  yellow  e0af68  red     f7768e  crimson db4b4b
+  blue    7aa2f7  cyan    7dcfff  sky     2ac3de  mint    73daca  green   9ece6a
+  yellow  e0af68  orange  ff9e64  red     f7768e  pink    ff007c  magenta bb9af7
 )
-typeset -ga ITC_NAMES=(blue cyan sky green mint teal magenta purple orange yellow red crimson)
+typeset -ga ITC_NAMES=(blue cyan sky mint green yellow orange red pink magenta)
 
 ITC_PIN_FILE="${ITC_PIN_FILE:-$HOME/.config/iterm-color/pins}"
 
