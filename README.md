@@ -37,8 +37,8 @@ This appends a `source` line to `programs.zsh.initContent`, so it needs
     itc pins         # ~/.config/iterm-color/pins
     itc off          # restore the profile's default for this session
 
-Colors: blue cyan sky mint green yellow orange red pink magenta.
+Colors: blue cyan sky mint green yellow orange red magenta.
 
 Colors are picked by `cksum` of the project name, so they're stable across
-shells and reboots. 10 colors means occasional collisions — `itc pin` those.
+shells and reboots. 9 colors means occasional collisions — `itc pin` those.
 Disabled under tmux and over ssh.

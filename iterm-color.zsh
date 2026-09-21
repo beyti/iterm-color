@@ -19,13 +19,13 @@
 typeset -gA ITC_BG ITC_TAB
 ITC_BG=(
   blue    091a3e  cyan    092b3e  sky     09363e  mint    093e36  green   253e09
-  yellow  3e2909  orange  3e1d09  red     3e0913  pink    3e0923  magenta 1c093e
+  yellow  3e2909  orange  3e1d09  red     3e0913  magenta 1c093e
 )
 ITC_TAB=(
   blue    7aa2f7  cyan    7dcfff  sky     2ac3de  mint    73daca  green   9ece6a
-  yellow  e0af68  orange  ff9e64  red     f7768e  pink    ff007c  magenta bb9af7
+  yellow  e0af68  orange  ff9e64  red     f7768e  magenta bb9af7
 )
-typeset -ga ITC_NAMES=(blue cyan sky mint green yellow orange red pink magenta)
+typeset -ga ITC_NAMES=(blue cyan sky mint green yellow orange red magenta)
 
 ITC_PIN_FILE="${ITC_PIN_FILE:-$HOME/.config/iterm-color/pins}"
 
