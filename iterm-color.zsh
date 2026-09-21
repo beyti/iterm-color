@@ -15,17 +15,13 @@
 # --- palette ----------------------------------------------------------------
 # Tokyo Night accents (https://tokyonight.org/palette/). Tab = the accent
 # itself; background = the accent's hue at 75% saturation, 14% lightness —
-# vivid but dark enough for light text. Near-identical hues were dropped.
+# vivid but dark enough for light text. Blue is the exception: hue 228°,
+# 62% saturation, 19% lightness, since the 221° version read greenish-grey.
+# Colors were hand-picked by previewing each one in a real tab.
 typeset -gA ITC_BG ITC_TAB
-ITC_BG=(
-  blue    091a3e  cyan    092b3e  sky     09363e  mint    093e36  green   253e09
-  yellow  3e2909  orange  3e1d09  red     3e0913  magenta 1c093e
-)
-ITC_TAB=(
-  blue    7aa2f7  cyan    7dcfff  sky     2ac3de  mint    73daca  green   9ece6a
-  yellow  e0af68  orange  ff9e64  red     f7768e  magenta bb9af7
-)
-typeset -ga ITC_NAMES=(blue cyan sky mint green yellow orange red magenta)
+ITC_BG=(  blue 121e4e  sky 09363e  mint 093e36  magenta 1c093e )
+ITC_TAB=( blue 7aa2f7  sky 2ac3de  mint 73daca  magenta bb9af7 )
+typeset -ga ITC_NAMES=(blue sky mint magenta)
 
 ITC_PIN_FILE="${ITC_PIN_FILE:-$HOME/.config/iterm-color/pins}"
 
